@@ -1,32 +1,34 @@
 {% set version = "1.0.0" %}
-{% set sha256 = "b97297174dc7a3da925b8ba45affa8b7b1a24dd2b9e535876cfd180ffc863d92" %}
+{% set sha256 = "0f9135eee4cda144c925c59db0b775bb60a679b9e656ad695094c9e9b5635736" %}
 
 package:
   name: message-ix
   version: {{ version }}
 
 source:
-  url: https://github.com/iiasa/message_ix/archive/v{{ version }}-prerelease.tar.gz
+  url: https://github.com/iiasa/message_ix/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
-    - messageix-config = message_ix.cli:config_cli
+    - messageix-config=message_ix.cli:config
+    - messageix-dl=message_ix.cli:dl
 
 requirements:
   build:
     - python
     - pip
   run:
-    - ixmp ==0.1.1
+    - ixmp ==0.1.2
 
 test:
   imports:
     - message_ix
   commands:
     - messageix-config -h
+    - messageix-dl -h
     - python -c "import ixmp; import message_ix; ixmp.Platform(dbtype='HSQLDB')"
 
 about:
