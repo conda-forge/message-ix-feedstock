@@ -10,14 +10,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  noarch: python
+  number: 4
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - messageix-config=message_ix.cli:config
     - messageix-dl=message_ix.cli:dl
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
