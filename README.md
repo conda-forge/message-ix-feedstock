@@ -14,9 +14,8 @@ Summary: The integrated assessment and energy systems model MESSAGEix https://ME
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/message-ix-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/message-ix-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/message-ix-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/message-ix-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/message-ix-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/message-ix-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/message-ix-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/message-ix-feedstock)
 
 Current release info
 ====================
