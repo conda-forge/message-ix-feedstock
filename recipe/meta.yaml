@@ -1,5 +1,5 @@
-{% set version = "1.0.0" %}
-{% set sha256 = "0f9135eee4cda144c925c59db0b775bb60a679b9e656ad695094c9e9b5635736" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "7dec36641094420851fd46966110c271aceecb822e3f874bd7c0538a2274c54e" %}
 
 package:
   name: message-ix
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - messageix-config=message_ix.cli:config
