@@ -30,8 +30,8 @@ test:
   commands:
     - messageix-config -h
     - messageix-dl -h
-    - python -c "import ixmp; assert ixmp.__version__ == '{{ ixmp_version }}'"
-    - python -c "import message_ix; assert message_ix.__version__ == '{{ version }}'"
+    - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ ixmp_version }}'"
+    - python -c "import message_ix; print(message_ix.__version__); assert message_ix.__version__ == '{{ version }}'"
     - python -c "import ixmp; import message_ix; ixmp.Platform(dbtype='HSQLDB')"
     - messageix-dl --repo_path tutorial
 
