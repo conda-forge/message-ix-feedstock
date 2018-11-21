@@ -1,6 +1,6 @@
 {% set version = "1.1.0" %}
 {% set ixmp_version = "0.1.3" %}
-{% set ixmp_conda_version = "0.1.3-1" %}
+{% set ixmp_conda_version = "0.1.3=1" %}
 {% set sha256 = "51602258aef34075af1cc3ee9a74d2dd37ae4d2cead3507d337d91f97145ec97" %}
 
 package:
