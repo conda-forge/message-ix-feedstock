@@ -1,5 +1,7 @@
-{% set version = "1.0.0" %}
-{% set sha256 = "0f9135eee4cda144c925c59db0b775bb60a679b9e656ad695094c9e9b5635736" %}
+{% set version = "1.1.0" %}
+{% set ixmp_version = "0.1.3" %}
+{% set ixmp_conda_version = "0.1.3=1" %}
+{% set sha256 = "51602258aef34075af1cc3ee9a74d2dd37ae4d2cead3507d337d91f97145ec97" %}
 
 package:
   name: message-ix
@@ -10,7 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
+  noarch: python
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - messageix-config=message_ix.cli:config
@@ -21,7 +24,7 @@ requirements:
     - python
     - pip
   run:
-    - ixmp ==0.1.2
+    - ixmp =={{ ixmp_conda_version }}
 
 test:
   imports:
@@ -29,7 +32,10 @@ test:
   commands:
     - messageix-config -h
     - messageix-dl -h
+    - python -c "import ixmp; print(ixmp.__version__); assert ixmp.__version__ == '{{ ixmp_version }}'"
+    - python -c "import message_ix; print(message_ix.__version__); assert message_ix.__version__ == '{{ version }}'"
     - python -c "import ixmp; import message_ix; ixmp.Platform(dbtype='HSQLDB')"
+    - messageix-dl --repo_path tutorial
 
 about:
   home: https://github.com/iiasa/message_ix
