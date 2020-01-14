@@ -30,6 +30,7 @@ test:
     - message_ix
   requires:
     - asyncssh
+    - requests
   commands:
     - python -c "import ixmp; assert ixmp.__version__ == '{{ ixmp_version }}'"
     - python -c "import message_ix; assert message_ix.__version__ == '{{ version }}'"
@@ -39,6 +40,7 @@ test:
     - message-ix dl tutorial
     # Special CLI commands loaded from modules
     - message-ix add-years --help
+    - python -c "import message_ix.testing.nightly"
     - message-ix nightly --help
 
 about:
