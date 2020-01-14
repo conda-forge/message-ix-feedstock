@@ -38,7 +38,7 @@ test:
     # Download the tutorials
     - message-ix dl tutorial
     # Special CLI commands loaded from modules
-    - message-ix add-year --help
+    - message-ix add-years --help
     - message-ix nightly --help
 
 about:
