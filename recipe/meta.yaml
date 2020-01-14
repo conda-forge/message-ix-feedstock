@@ -1,7 +1,7 @@
-{% set version = "1.2.0" %}
-{% set ixmp_version = "0.2.0" %}
-{% set ixmp_conda_version = "0.2.0" %}
-{% set sha256 = "68f2b83b07efcfb59d5912a036bdb43833f475b1cfac8ec46109c1a0210e3e58" %}
+{% set version = "2.0.0" %}
+{% set ixmp_version = "2.0.0" %}
+{% set ixmp_conda_version = "2.0.0" %}
+{% set sha256 = "ecaf4d7a5023dbb8196baff3f121715236ec99df8ea7789d8f00213607cbb67c" %}
 
 package:
   name: message-ix
@@ -14,10 +14,9 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-    - messageix-config=message_ix.cli:config
-    - messageix-dl=message_ix.cli:dl
+    - message-ix=message_ix.cli:main
 
 requirements:
   build:
@@ -29,13 +28,20 @@ requirements:
 test:
   imports:
     - message_ix
+  requires:
+    - asyncssh
+    - requests
   commands:
     - python -c "import ixmp; assert ixmp.__version__ == '{{ ixmp_version }}'"
     - python -c "import message_ix; assert message_ix.__version__ == '{{ version }}'"
-    - messageix-config -h
-    - messageix-dl -h
-    - messageix-dl --repo_path tutorial
-    - python -m message_ix.tools.add_year --help
+    # General CLI help
+    - message-ix --help
+    # Download the tutorials
+    - message-ix dl tutorial
+    # Special CLI commands loaded from modules
+    - message-ix add-years --help
+    - python -c "import message_ix.testing.nightly"
+    - message-ix nightly --help
 
 about:
   home: https://github.com/iiasa/message_ix
