@@ -28,13 +28,18 @@ requirements:
 test:
   imports:
     - message_ix
+  requires:
+    - asyncssh
   commands:
     - python -c "import ixmp; assert ixmp.__version__ == '{{ ixmp_version }}'"
     - python -c "import message_ix; assert message_ix.__version__ == '{{ version }}'"
-    - messageix-config -h
-    - messageix-dl -h
-    - messageix-dl --repo_path tutorial
-    - python -m message_ix.tools.add_year --help
+    # General CLI help
+    - message-ix --help
+    # Download the tutorials
+    - message-ix dl tutorial
+    # Special CLI commands loaded from modules
+    - message-ix add-year --help
+    - message-ix nightly --help
 
 about:
   home: https://github.com/iiasa/message_ix
