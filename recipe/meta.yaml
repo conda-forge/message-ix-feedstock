@@ -1,15 +1,15 @@
-{% set version = "2.0.0" %}
-{% set ixmp_version = "2.0.0" %}
-{% set ixmp_conda_version = "2.0.0" %}
-{% set sha256 = "ecaf4d7a5023dbb8196baff3f121715236ec99df8ea7789d8f00213607cbb67c" %}
+{% set name = "message-ix" %}
+{% set name_ = "message_ix" %}
+{% set version = "3.0.0" %}
+{% set hash = "43ef44c6e3bc045ed35799383d393c1427ae2462f51c8b40c896164689f32718" %}
 
 package:
-  name: message-ix
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/iiasa/message_ix/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name_ }}/{{ name_ }}-{{ version }}.tar.gz
+  sha256: {{ hash }}
 
 build:
   number: 0
@@ -20,10 +20,11 @@ build:
 
 requirements:
   build:
-    - python
-    - pip
+  - python
+  - pip
+  - setuptools-scm
   run:
-    - ixmp =={{ ixmp_conda_version }}
+  - ixmp ==3.0.0
 
 test:
   imports:
