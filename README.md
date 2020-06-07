@@ -7,7 +7,7 @@ Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: The integrated assessment and energy systems model MESSAGEix https://MESSAGEix.iiasa.ac.at/
+Summary: The MESSAGE integrated assessment and energy systems model
 
 
 
