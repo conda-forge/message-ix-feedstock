@@ -14,9 +14,9 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - message-ix=message_ix.cli:main
+  - message-ix=message_ix.cli:main
 
 requirements:
   build:
@@ -28,29 +28,26 @@ requirements:
 
 test:
   imports:
-    - message_ix
+  - message_ix
   requires:
-    - asyncssh
-    - requests
+  - asyncssh
+  - requests
   commands:
-    - python -c "import ixmp; assert ixmp.__version__ == '{{ ixmp_version }}'"
-    - python -c "import message_ix; assert message_ix.__version__ == '{{ version }}'"
-    # General CLI help
-    - message-ix --help
-    # Download the tutorials
-    - message-ix dl tutorial
-    # Special CLI commands loaded from modules
-    - message-ix add-years --help
-    - python -c "import message_ix.testing.nightly"
-    - message-ix nightly --help
+  # General CLI help
+  - message-ix --help
+  # Download the tutorials
+  - message-ix dl tutorial
+  # Special CLI commands loaded from modules
+  - message-ix add-years --help
+  - message-ix nightly --help
 
 about:
   home: https://github.com/iiasa/message_ix
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'The integrated assessment and energy systems model MESSAGEix https://MESSAGEix.iiasa.ac.at/'
+  summary: The MESSAGE integrated assessment and energy systems model
 
 extra:
   recipe-maintainers:
-    - gidden
-    - khaeru
+  - gidden
+  - khaeru
