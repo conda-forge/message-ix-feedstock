@@ -1,7 +1,7 @@
-{% set version = "2.0.0" %}
+{% set version = "3.0.0" %}
 {% set ixmp_version = "2.0.0" %}
 {% set ixmp_conda_version = "2.0.0" %}
-{% set sha256 = "ecaf4d7a5023dbb8196baff3f121715236ec99df8ea7789d8f00213607cbb67c" %}
+{% set sha256 = "d757c64a8e573b5d82d1436dc631ac829d44fab18670c0b4899062f3ef8381df" %}
 
 package:
   name: message-ix
@@ -47,7 +47,7 @@ about:
   home: https://github.com/iiasa/message_ix
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'The integrated assessment and energy systems model MESSAGEix https://MESSAGEix.iiasa.ac.at/'
+  summary: The integrated assessment and energy systems model MESSAGEix https://MESSAGEix.iiasa.ac.at/
 
 extra:
   recipe-maintainers:
