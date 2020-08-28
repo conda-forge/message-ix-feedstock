@@ -1,7 +1,7 @@
 {% set name = "message-ix" %}
 {% set name_ = "message_ix" %}
-{% set version = "3.0.1" %}
-{% set hash = "48db07fdd6692b60cb121490ca6bd2affcef4380b9c9fa1c531c46414e53cfba" %}
+{% set version = "3.1.0" %}
+{% set hash = "27d28c8846ebeab35fcb6d09e3926e23ff2eabebcbf11c54dba418e325c95f81" %}
 
 package:
   name: {{ name }}
@@ -16,30 +16,30 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-  - message-ix=message_ix.cli:main
+    - message-ix=message_ix.cli:main
 
 requirements:
   build:
-  - python
-  - pip
-  - setuptools-scm
+    - python
+    - pip
+    - setuptools-scm
   run:
-  - ixmp ==3.0.0
+    - ixmp ==3.0.0
 
 test:
   imports:
-  - message_ix
+    - message_ix
   requires:
-  - asyncssh
-  - requests
+    - asyncssh
+    - requests
   commands:
   # General CLI help
-  - message-ix --help
+    - message-ix --help
   # Download the tutorials
-  - message-ix dl tutorial
+    - message-ix dl tutorial
   # Special CLI commands loaded from modules
-  - message-ix add-years --help
-  - message-ix nightly --help
+    - message-ix add-years --help
+    - message-ix nightly --help
 
 about:
   home: https://github.com/iiasa/message_ix
@@ -49,5 +49,5 @@ about:
 
 extra:
   recipe-maintainers:
-  - gidden
-  - khaeru
+    - gidden
+    - khaeru
