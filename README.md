@@ -5,7 +5,7 @@ Home: https://github.com/iiasa/message_ix
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The MESSAGE integrated assessment and energy systems model
 
