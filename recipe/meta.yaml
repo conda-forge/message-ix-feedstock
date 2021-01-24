@@ -20,11 +20,22 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.6
     - pip
     - setuptools-scm
   run:
-    - ixmp >=3.1.0
+    - python >=3.6
+    # Install requirements
+    - click
+    - ixmp >=3.2.0
+    - numpy
+    - pandas
+    # Extra requirements
+    - iam-units
+    - jupyter
+    - matplotlib-base
+    - plotnine
+    - pyam >=0.6
 
 test:
   imports:
@@ -34,12 +45,12 @@ test:
     - requests
   commands:
   # General CLI usage
+    - message-ix --help
+    - message-ix add-years --help
+    - message-ix nightly --help
     - message-ix show-versions
   # Download the tutorials
     - message-ix dl tutorial
-  # Special CLI commands loaded from modules
-    - message-ix add-years --help
-    - message-ix nightly --help
 
 about:
   home: https://github.com/iiasa/message_ix
