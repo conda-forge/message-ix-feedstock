@@ -1,7 +1,7 @@
 {% set name = "message-ix" %}
 {% set name_ = "message_ix" %}
-{% set version = "3.2.0" %}
-{% set hash = "c697223f06f64832f0de5cc48a3be36489ab69601c920dec374c0da25083efbe" %}
+{% set version = "3.3.0" %}
+{% set hash = "af416bf9168b6cea59cc28d6963065ef2b41d0c6d49fe67830d9ee4c60edd153" %}
 
 package:
   name: {{ name }}
@@ -19,7 +19,7 @@ build:
     - message-ix=message_ix.cli:main
 
 requirements:
-  build:
+  host:
     - python >=3.6
     - pip
     - setuptools-scm
