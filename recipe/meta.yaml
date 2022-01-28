@@ -27,7 +27,7 @@ requirements:
     - python >=3.6
     # Install requirements
     - click
-    - ixmp >=3.3.0
+    - ixmp >=3.4.0
     - numpy
     - pandas
     # Extra requirements
