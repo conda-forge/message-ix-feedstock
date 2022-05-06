@@ -23,17 +23,19 @@ requirements:
     - python >=3.6
     - pip
     - setuptools-scm
+
   run:
     - python >=3.6
     # Install requirements
     - click
-    - ixmp >=3.4.0
+    - ixmp >=3.5.0
     - numpy
-    - pandas
+    - pandas >=1.2
     # Extra requirements
     - iam-units
     - jupyter
     - matplotlib-base
+    - pint
     - plotnine
     - pyam >=0.6
 
