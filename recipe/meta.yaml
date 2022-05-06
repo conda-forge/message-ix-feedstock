@@ -1,7 +1,7 @@
 {% set name = "message-ix" %}
 {% set name_ = "message_ix" %}
-{% set version = "3.4.0" %}
-{% set hash = "d6a294b3ef6544b829facc2b424e27e5dfcc9b6748ebfa43011841f2e40fcf9b" %}
+{% set version = "3.5.0" %}
+{% set hash = "792d396a9a2be748a5be19f0256ab327740ac832f7a9b75dcdba26e3af7d8917" %}
 
 package:
   name: {{ name }}
