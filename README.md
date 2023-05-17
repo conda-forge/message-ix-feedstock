@@ -1,11 +1,11 @@
-About message-ix
-================
+About message-ix-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/message-ix-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/iiasa/message_ix
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/message-ix-feedstock/blob/main/LICENSE.txt)
 
 Summary: The MESSAGE integrated assessment and energy systems model
 
@@ -143,7 +143,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@LauWien](https://github.com/LauWien/)
 * [@gidden](https://github.com/gidden/)
+* [@glatterf42](https://github.com/glatterf42/)
 * [@khaeru](https://github.com/khaeru/)
 
