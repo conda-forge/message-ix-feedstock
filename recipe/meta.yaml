@@ -20,15 +20,15 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     # Install requirements
     - click
     - genno
     - importlib_metadata
-    - ixmp >=3.7.0
+    - ixmp >=3.8.0
     - numpy
     - pandas >=1.2
     # Extra requirements
