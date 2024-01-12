@@ -1,7 +1,7 @@
 {% set name = "message-ix" %}
 {% set name_ = "message_ix" %}
-{% set version = "3.7.0" %}
-{% set hash = "5f8205f3c11f64b684eab558c1ab281f50012ee8926011bec393bc6f1872db52" %}
+{% set version = "3.8.0" %}
+{% set hash = "d015a7c35e333ff8cc3d16fec42d04339cd36d6d35d5404d833585252cae88c8" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
