@@ -43,13 +43,11 @@ test:
   imports:
     - message_ix
   requires:
-    - asyncssh
     - requests
   commands:
   # General CLI usage
     - message-ix --help
     - message-ix add-years --help
-    - message-ix nightly --help
     - message-ix show-versions
   # Download the tutorials
     - message-ix dl tutorial
