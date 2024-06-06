@@ -26,7 +26,7 @@ requirements:
     - python >=3.8
     # Install requirements
     - click
-    - genno
+    - genno >=1.20
     - importlib_metadata
     - ixmp >=3.9.0
     - numpy
