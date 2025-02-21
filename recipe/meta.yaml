@@ -1,7 +1,7 @@
 {% set name = "message-ix" %}
 {% set name_ = "message_ix" %}
-{% set version = "3.9.0" %}
-{% set hash = "78023a8d441f2bd0fbd8ce2de07e387d24670407bdcd9fc03402435819f442b9" %}
+{% set version = "3.10.0" %}
+{% set hash = "7bb4b08fc0b49b0e473d24d107b9eaec815c93cc851f639bc0f7bb823ecfceac" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -22,13 +22,14 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
     - python >={{ python_min }}
     # Install requirements
     - click
     - genno >=1.20
-    - importlib_metadata
-    - ixmp >=3.9.0
+    - importlib-metadata
+    - ixmp >=3.10.0
     - numpy
     - pandas >=1.2
     # Extra requirements
@@ -61,6 +62,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - gidden
     - khaeru
     - glatterf42
