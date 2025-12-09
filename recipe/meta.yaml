@@ -28,7 +28,6 @@ requirements:
     # Install requirements
     - click
     - genno >=1.20
-    - importlib-metadata
     - ixmp >=3.11.1
     - numpy
     - pandas >=1.2
